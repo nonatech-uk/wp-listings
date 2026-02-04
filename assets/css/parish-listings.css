@@ -1,0 +1,227 @@
+/**
+ * Parish Listings Styles
+ */
+
+/* Container */
+.parish-listings-container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Individual listing item */
+.parish-listing-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Vertically center image with content */
+.parish-listing-item.parish-listing-image-left,
+.parish-listing-item.parish-listing-image-right {
+    align-items: center;
+}
+
+/* Image container */
+.parish-listing-image {
+    flex: 0 0 300px;
+    max-width: 300px;
+}
+
+.parish-listing-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Content container */
+.parish-listing-content {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Title */
+.parish-listing-title {
+    margin: 0 0 15px 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Description */
+.parish-listing-description {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.parish-listing-description p:last-child {
+    margin-bottom: 0;
+}
+
+/* Meta information */
+.parish-listing-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+    font-size: 0.95em;
+}
+
+.parish-listing-url,
+.parish-listing-phone,
+.parish-listing-email,
+.parish-listing-address {
+    display: block;
+    color: #666;
+}
+
+.parish-listing-url strong,
+.parish-listing-phone strong,
+.parish-listing-email strong,
+.parish-listing-address strong {
+    margin-right: 5px;
+    color: #333;
+}
+
+.parish-listing-url a,
+.parish-listing-phone a,
+.parish-listing-email a {
+    color: #4a6741;
+    text-decoration: none;
+}
+
+.parish-listing-url a:hover,
+.parish-listing-phone a:hover,
+.parish-listing-email a:hover {
+    color: #3d5c3a;
+    text-decoration: underline;
+}
+
+/* Website link button */
+.parish-listing-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4a6741;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.parish-listing-link:hover {
+    background-color: #3d5c3a;
+    color: #fff;
+}
+
+/* Layout variations */
+
+/* Image left (default) */
+.parish-listing-image-left {
+    flex-direction: row;
+}
+
+/* Image right */
+.parish-listing-image-right {
+    flex-direction: row-reverse;
+}
+
+/* No image */
+.parish-listing-no-image {
+    flex-direction: row;
+}
+
+.parish-listing-no-image .parish-listing-content {
+    flex: 1 1 100%;
+}
+
+/* Pagination */
+.parish-listings-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.parish-listings-prev,
+.parish-listings-next {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4a6741;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.parish-listings-prev:hover,
+.parish-listings-next:hover {
+    background-color: #3d5c3a;
+    color: #fff;
+}
+
+.parish-listings-page-info {
+    color: #666;
+    font-size: 0.95em;
+}
+
+/* No listings message */
+.parish-listings-none {
+    text-align: center;
+    padding: 40px 20px;
+    color: #666;
+    font-style: italic;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .parish-listing-item {
+        flex-direction: column !important;
+    }
+
+    .parish-listing-image {
+        flex: 0 0 auto;
+        max-width: 100%;
+    }
+
+    .parish-listing-content {
+        flex: 1 1 100%;
+    }
+
+    .parish-listings-pagination {
+        flex-wrap: wrap;
+    }
+
+    .parish-listings-prev,
+    .parish-listings-next {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
+
+/* Smaller screens */
+@media screen and (max-width: 480px) {
+    .parish-listing-item {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .parish-listing-title {
+        font-size: 1.3em;
+    }
+
+    .parish-listing-link {
+        display: block;
+        text-align: center;
+    }
+}
